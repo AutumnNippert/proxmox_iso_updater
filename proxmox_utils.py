@@ -70,15 +70,7 @@ def send_proxmox_iso_download_request(download_url, filename):
         "content": "iso",
         "filename": filename,
         "url": download_url,
-        "dry-run": 1,
     }
-
-    request={}
-    request['method'] = 'POST'
-    request['url'] = download_endpoint
-    request['headers'] = headers
-    request['json'] = payload
-    print(json.dumps(request, indent=2))
 
     response = requests.post(
         download_endpoint,
@@ -88,7 +80,7 @@ def send_proxmox_iso_download_request(download_url, filename):
     )
 
     try:
-        resp_data = response.json()
-        print(json.dumps(resp_data, indent=2))
+        print("Response:", response)
+        print("Response JSON:", response.json())
     except Exception as e:
         print("Failed to parse JSON response:", response.text)
