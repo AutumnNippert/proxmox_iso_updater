@@ -1,0 +1,5 @@
+{
+    "host": "proxmox.unhcsc.ccdc",
+    "port": 8006,
+    "storage": "TrueNASPool:iso"
+}

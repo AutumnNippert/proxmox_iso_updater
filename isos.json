@@ -1,0 +1,12 @@
+[
+    {
+        "filename": "arch-linux-latest.iso",
+        "url": "https://mirrors.mit.edu/archlinux/iso/latest/",
+        "regex": "archlinux-\\d{4}\\.\\d{2}\\.\\d{2}-x86_64\\.iso"
+    },
+    {
+        "filename": "kali-linux-netinst-latest.iso",
+        "url": "https://cdimage.kali.org/current/",
+        "regex": "kali-linux-\\d{4}\\.\\d{1}-installer-netinst-amd64\\.iso"
+    }
+]
