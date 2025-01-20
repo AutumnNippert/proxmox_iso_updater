@@ -73,9 +73,12 @@ def send_proxmox_iso_download_request(download_url, filename):
         "dry-run": 1,
     }
 
-    print("Outbound payload:")
-    print(json.dumps(payload, indent=2))
-    print("Sending to:", download_endpoint)
+    request={}
+    request['method'] = 'POST'
+    request['url'] = download_endpoint
+    request['headers'] = headers
+    request['json'] = payload
+    print(json.dumps(request, indent=2))
 
     response = requests.post(
         download_endpoint,
